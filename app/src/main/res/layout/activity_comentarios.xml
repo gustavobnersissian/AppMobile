@@ -9,11 +9,10 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"
         android:name="com.example.projetomobile.Post"
-        android:layout_width="411dp"
-        android:layout_height="306dp"
+        android:layout_width="391dp"
+        android:layout_height="320dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,8 +30,8 @@
         app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView2" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView3"
-        android:name="com.example.projetomobile.Post"
+        android:id="@+id/fragComent"
+        android:name="com.example.projetomobile.Comentario"
         android:layout_width="386dp"
         android:layout_height="228dp"
         android:layout_marginTop="16dp"
@@ -40,27 +39,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="311dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="12dp"
-        android:ems="10"
-        android:hint="Adicionar comentário"
-        android:inputType="date|textUri|textAutoCorrect|numberSigned|textVisiblePassword|textWebEditText|textMultiLine|textNoSuggestions|textPersonName|textCapSentences|textAutoComplete|textImeMultiLine|numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView3"
-        app:layout_constraintVertical_bias="0.475" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="41dp"
-        android:layout_height="32dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/btnAddComent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Adicionar Comentário"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.361"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
-        app:srcCompat="@drawable/add2" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragComent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
