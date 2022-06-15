@@ -1,6 +1,7 @@
 package models
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 
@@ -11,5 +12,8 @@ interface CommentDao {
 
     @Query(value = "SELECT * FROM Comment")
     fun list(): List<Comment>
+
+    @Delete
+    fun delete(note: Comment)
 
 }
