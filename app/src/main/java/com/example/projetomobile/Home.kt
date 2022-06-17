@@ -17,15 +17,18 @@ class Home : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.txtC1.setOnClickListener {
-            val x = Intent(this, Comunidade1::class.java)
+            val x = Intent(this, Comunidades::class.java)
+            x.putExtra("community", binding.txtC1.text.toString())
             startActivity(x)
         }
         binding.txtC2.setOnClickListener {
-            val x = Intent(this, Comunidade2::class.java)
+            val x = Intent(this, Comunidades::class.java)
+            x.putExtra("community", binding.txtC2.text.toString())
             startActivity(x)
         }
         binding.txtC3.setOnClickListener {
-            val x = Intent(this, Comunidade3::class.java)
+            val x = Intent(this, Comunidades::class.java)
+            x.putExtra("community", binding.txtC3.text.toString())
             startActivity(x)
         }
 

@@ -7,8 +7,8 @@
         <entry key="..\:/PDM3ATT/AppMobile/app/src/main/res/layout/activity_comunidade1.xml" value="0.25" />
         <entry key="..\:/PDM3ATT/AppMobile/app/src/main/res/layout/activity_comunidade2.xml" value="0.23802083333333332" />
         <entry key="..\:/PDM3ATT/AppMobile/app/src/main/res/layout/activity_comunidade3.xml" value="0.2520833333333333" />
-        <entry key="..\:/PDM3ATT/AppMobile/app/src/main/res/layout/activity_comunidades.xml" value="0.33" />
-        <entry key="..\:/PDM3ATT/AppMobile/app/src/main/res/layout/activity_criar_post.xml" value="0.25" />
+        <entry key="..\:/PDM3ATT/AppMobile/app/src/main/res/layout/activity_comunidades.xml" value="0.22" />
+        <entry key="..\:/PDM3ATT/AppMobile/app/src/main/res/layout/activity_criar_post.xml" value="0.33" />
         <entry key="..\:/PDM3ATT/AppMobile/app/src/main/res/layout/activity_ho.xml" value="0.325" />
         <entry key="..\:/PDM3ATT/AppMobile/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/PDM3ATT/AppMobile/app/src/main/res/layout/fragment_post.xml" value="0.25" />
@@ -27,11 +27,6 @@
         <entry key="..\:/Users/Leonardo/Desktop/senac/semestre_5/ProgDispMoveis/lista4/AppMobile/app/src/main/res/layout/fragment_post.xml" value="0.25" />
       </map>
     </option>
-  </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/projetomobile/NewComment.kt" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/projetomobile/NewPost.kt" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/projetomobile/Post.kt" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

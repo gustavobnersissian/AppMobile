@@ -10,19 +10,27 @@
 
 
     <TextView
+        android:id="@+id/imgComment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:width="300dp"
         android:height="500dp"
-        android:text="Texto Do Post"
-        />
+        android:text="Texto Do Post" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgLike"
         android:layout_width="65dp"
         android:layout_height="54dp"
         android:layout_gravity="bottom"
         android:layout_marginLeft="150dp"
         android:src="@drawable/like" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="56dp"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="230dp"
+        android:src="@drawable/comment" />
 
 </FrameLayout>

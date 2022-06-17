@@ -34,19 +34,19 @@
                 android:id="@+id/txtC1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Comunidade 1" />
+                android:text="Comunidade Futebol" />
 
             <TextView
                 android:id="@+id/txtC3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Comunidade 3" />
+                android:text="Comunidade Jogos" />
 
             <TextView
                 android:id="@+id/txtC2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Comunidade 2" />
+                android:text="Comunidade Filmes, Séries e Livros" />
 
         </LinearLayout>
     </ScrollView>

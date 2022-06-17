@@ -39,7 +39,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Comunidade1"
+            android:name=".Comunidades"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
