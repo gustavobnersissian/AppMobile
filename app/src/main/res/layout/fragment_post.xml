@@ -6,16 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".Post">
 
-    <ImageView
-        android:id="@+id/comment"
-        android:layout_width="66dp"
-        android:layout_height="66dp"
-        android:src="@drawable/comment" />
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:width="300dp"
+        android:height="500dp"
+        android:text="Texto Do Post"
+        />
 
     <ImageView
-        android:id="@+id/like"
-        android:layout_width="66dp"
-        android:layout_height="66dp"
+        android:id="@+id/imageView"
+        android:layout_width="65dp"
+        android:layout_height="54dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="150dp"
         android:src="@drawable/like" />
 
 </FrameLayout>
