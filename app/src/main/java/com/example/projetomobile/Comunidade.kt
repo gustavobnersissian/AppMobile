@@ -4,7 +4,11 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.room.Room
+import com.example.projetomobile.databinding.ActivityComentBinding
 import com.example.projetomobile.databinding.ActivityComunidadeBinding
+import models.AppMobile
+import models.Comment
 
 class Comunidade : AppCompatActivity() {
     lateinit var binding: ActivityComunidadeBinding
@@ -19,13 +23,6 @@ class Comunidade : AppCompatActivity() {
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
 
-        if(requestCode == 1){
-            if(resultCode == Activity.RESULT_OK){
 
-            }
-        }
-    }
 }

@@ -19,7 +19,7 @@ class Comentarios : AppCompatActivity() {
 
         binding.btnAddComent.setOnClickListener {
             val intent = Intent(this,  NewComment::class.java)
-            startActivity(intent)
+            startActivityForResult(intent, 0)
         }
 
     }
