@@ -25,6 +25,16 @@
         <entry key="..\:/Users/Leonardo/Desktop/senac/semestre_5/ProgDispMoveis/lista4/AppMobile/app/src/main/res/layout/activity_new_post.xml" value="0.21" />
         <entry key="..\:/Users/Leonardo/Desktop/senac/semestre_5/ProgDispMoveis/lista4/AppMobile/app/src/main/res/layout/fragment_comentario.xml" value="0.25" />
         <entry key="..\:/Users/Leonardo/Desktop/senac/semestre_5/ProgDispMoveis/lista4/AppMobile/app/src/main/res/layout/fragment_post.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/add.xml" value="0.2985" />
+        <entry key="app/src/main/res/layout/activity_comunidades.xml" value="0.19376017252604166" />
+        <entry key="app/src/main/res/layout/activity_criar_post.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.24503733317057286" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1992487589518229" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.29907407407407405" />
+        <entry key="app/src/main/res/layout/fragment_fragmento_post.xml" value="0.27710843373493976" />
+        <entry key="app/src/main/res/layout/fragment_post.xml" value="0.1" />
       </map>
     </option>
   </component>

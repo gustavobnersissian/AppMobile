@@ -4,15 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#009688"
+    android:padding="50px"
     tools:context=".Home">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="72dp"
         android:text="Comunidades"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,19 +39,35 @@
                 android:id="@+id/txtC1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Comunidade Futebol" />
+                android:background="#3F51B5"
+                android:padding="50px"
+                android:shadowColor="@color/black"
+                android:text="Comunidade Futebol"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/txtC3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Comunidade Jogos" />
+                android:background="#3F51B5"
+                android:padding="50px"
+                android:text="Comunidade Jogos"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/txtC2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Comunidade Filmes, Séries e Livros" />
+                android:background="#3F51B5"
+                android:padding="50px"
+                android:text="Comunidade Filmes, Séries e Livros"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>

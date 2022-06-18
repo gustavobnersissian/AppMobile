@@ -1,5 +1,6 @@
 package com.example.projetomobile
 
+import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -50,14 +51,19 @@ class Login : AppCompatActivity() {
         }
         else {
             Toast.makeText(this,"Já logado!", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
         }
 
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        Toast.makeText(this, data.toString(), Toast.LENGTH_LONG).show()
         if (requestCode == 0) {
             if (resultCode == Activity.RESULT_OK) {
+                val intent = Intent(this, Home::class.java)
+                startActivity(intent)
                 Toast.makeText(this,"Logado!", Toast.LENGTH_LONG).show()
             } else {
                 finishAffinity()

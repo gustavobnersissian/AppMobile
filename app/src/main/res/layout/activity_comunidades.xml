@@ -4,42 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#009688"
     tools:context=".Comunidades">
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="112dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="4dp"
-        android:text="Comunidade 1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="267dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="72dp" />
 
     <Button
         android:id="@+id/btnCriarPost1"
-        android:layout_width="72dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="169dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="104dp"
         android:text="+"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="387dp"
-        android:layout_height="501dp"
+        android:layout_width="383dp"
+        android:layout_height="450dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCriarPost1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <LinearLayout
+            android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical" >
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/cont2"
+                android:name="com.example.projetomobile.fragmentoPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

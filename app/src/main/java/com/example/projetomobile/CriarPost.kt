@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.example.projetomobile.databinding.ActivityComunidadesBinding
 import com.example.projetomobile.databinding.ActivityCriarPostBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import models.PostDC
@@ -21,12 +22,12 @@ class CriarPost : AppCompatActivity() {
 
     lateinit var binding: ActivityCriarPostBinding
 
-    private val user = FirebaseAuth.getInstance().currentUser
+
     var database: DatabaseReference? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
+        val user = FirebaseAuth.getInstance().currentUser
 
         configurarFirebase()
 
@@ -47,11 +48,11 @@ class CriarPost : AppCompatActivity() {
             Toast.makeText(this, "entrou", Toast.LENGTH_SHORT).show()
             val post = PostDC(
                 postContent = binding.txtConteudo.text.toString(),
-                username = user.toString(),
+                username = user!!.email.toString(),
                 community = community.toString(),
                 like = 0,
-                date = "date",
-                hours = "hours"
+                date = date,
+                hours = hours
             )
             Toast.makeText(this, "saiu", Toast.LENGTH_SHORT).show()
 
@@ -66,12 +67,8 @@ class CriarPost : AppCompatActivity() {
             setResult(Activity.RESULT_OK, returnIntent)
             finish()
         }
-
-
-
     }
-
-    fun configurarFirebase() {
+            fun configurarFirebase() {
         val usuario = FirebaseAuth.getInstance().currentUser
         if (usuario != null) {
             database = FirebaseDatabase.getInstance().reference.child(usuario.uid)
