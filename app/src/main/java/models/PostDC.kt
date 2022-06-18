@@ -11,6 +11,6 @@ data class PostDC(
     var like: Int = 0,
     var date: String,
     var hours: String,
-    var comments: ArrayList<String>
+    var comments: ArrayList<String>? = null
 )
 

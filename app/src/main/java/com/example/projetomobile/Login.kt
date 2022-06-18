@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
 import com.example.projetomobile.databinding.ActivityLoginBinding
+import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 
 class Login : AppCompatActivity() {
@@ -36,97 +37,37 @@ class Login : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Barra de ação
-        actionBar = supportActionBar!!
-        actionBar.title = "Login"
+        val providers = arrayListOf(
+            AuthUI.IdpConfig.EmailBuilder().build())
 
-        // Dialog
-        progressDialog = ProgressDialog(this)
-        progressDialog.setTitle("Por favor espere...")
-        progressDialog.setMessage("Logando...")
-        progressDialog.setCanceledOnTouchOutside(false)
-
-        // Iniciar Firebase Authentication
-        firebaseAuth = FirebaseAuth.getInstance()
-        checkUser()
-
-        // SignUP
-        binding.noAccountTv.setOnClickListener {
-            startActivity(Intent(this, SignUpActivity::class.java))
-        }
-
-        // Login
-        binding.LoginBtn.setOnClickListener {
-            // Antes de logar, validar a data
-            validateData()
-        }
-
-
-    }
-
-    private fun getUsername() {
-        var nomeUsuario = email
-        nomeUsuario.substringBeforeLast("@")
-        print(nomeUsuario)
-    }
-
-    private fun validateData() {
-        // Pega data
-        email = binding.emailEt.text.toString().trim()
-        password = binding.passwordEt.text.toString().trim()
-
-        // Validar
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            // Forma Inválida de E-mail
-            binding.emailEt.error = "Formato de e-mail inválido!"
-        }
-        else if (TextUtils.isEmpty(password)) {
-            // Sem senha
-            binding.passwordEt.error = "Por favor, insira uma senha"
+        if (FirebaseAuth.getInstance().currentUser == null) {
+            startActivityForResult(
+                AuthUI.getInstance()
+                    .createSignInIntentBuilder()
+                    .setAvailableProviders(providers)
+                    .build(), 0
+            )
         }
         else {
-            // Válido
-            // Logar
-            firebaseAuthLogin()
+            Toast.makeText(this,"Já logado!", Toast.LENGTH_LONG).show()
         }
 
     }
 
-    private fun firebaseAuthLogin() {
-
-        // Mostra progresso
-        progressDialog.show()
-        firebaseAuth.signInWithEmailAndPassword(email, password)
-            .addOnSuccessListener {
-                // Sucesso no login
-                progressDialog.dismiss()
-                // Pega info do usuário
-                val firebaseUser = firebaseAuth.currentUser
-                val email = firebaseUser!!.email
-                Toast.makeText(this, "Logou como $email", Toast.LENGTH_SHORT).show()
-
-                //getUsername()
-
-                // Abre profile activity
-                startActivity(Intent(this, ProfileActivity::class.java))
-                finish()
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 0) {
+            if (resultCode == Activity.RESULT_OK) {
+                Toast.makeText(this,"Logado!", Toast.LENGTH_LONG).show()
+            } else {
+                finishAffinity()
             }
-            .addOnFailureListener {
-                // Falha no login
-                progressDialog.dismiss()
-                //.makeText(this, "Login falhou, ${e.message}", Toast.LENGTH_SHORT).show()
-            }
-    }
-
-    private fun checkUser() {
-        // Se estiver logado -> vai para profile activity
-        // pega usuário atual
-        val firebaseUser = firebaseAuth.currentUser
-        if (firebaseUser != null){
-            // Está logado!
-            startActivity(Intent(this, ProfileActivity::class.java))
-            finish()
         }
-
     }
+
+
 }
+
+
+
+
